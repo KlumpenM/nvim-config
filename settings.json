@@ -1,0 +1,54 @@
+{
+    "cmake.pinnedCommands": [
+        "workbench.action.tasks.configureTaskRunner",
+        "workbench.action.tasks.runTask"
+    ],
+    "C_Cpp.default.compilerPath": "c:\\msys64\\ucrt64\\bin\\gcc.exe",
+    "editor.minimap.enabled": false,
+    "terminal.integrated.fontFamily": "monospace",
+    "editor.fontFamily": "monospace",
+    "editor.fontLigatures": true,
+    "breadcrumbs.enabled": false,
+
+    // Vim settings
+    "editor.lineNumbers": "relative",
+    "vim.leader": " ",
+    "vim.hlsearch": true,
+    "vim.normalModeKeyBindingsNonRecursive": [
+        // Navigation
+        // Switch between buffers
+        { "before": ["<S-h>"], "commands": [":bprevious"] },
+        { "before": ["<S-l>"], "commands": [":bnext"] },
+    
+        // Splits
+        { "before": ["leader", "v"], "commands": [":vsplit"] },
+        { "before": ["leader", "s"], "commands": [":split"] },
+
+        // Jump between the buffers created in a split
+        { "before": ["leader", "h"], "commands": ["workbench.action.focusLeftGroup"] },
+        { "before": ["leader", "j"], "commands": ["workbench.action.focusBelowGroup"] },
+        { "before": ["leader", "k"], "commands": ["workbench.action.focusAboveGroup"] },
+        { "before": ["leader", "l"], "commands": ["workbench.action.focusRightGroup"] },
+        
+        // Nice to haves
+        { "before": ["leader", "w"], "commands": [":w!"] },
+        { "before": ["leader", "q"], "commands": [":q!"] },
+        { "before": ["leader", "x"], "commands": [":x!"] },
+
+        // Maybe something to consider
+        { "before": ["[", "d"], "commands": ["editor.action.marker.prev"] },
+        { "before": ["]", "d"], "commands": ["editor.action.marker.next"] },
+        { "before": ["<leader>", "c", "a"], "commands": ["editor.action.quickFix"] },
+        { "before": ["leader", "f"], "commands": ["workbench.action.quickOpen"] },
+        { "before": ["leader", "p"], "commands": ["editor.action.formatDocument"] },
+        { "before": ["g", "h"], "commands": ["editor.action.showDefinitionPreviewHover"] }
+    ],
+    "vim.visualModeKeyBindings": [
+        // Move selected lines while staying in visual mode
+        { "before": ["J"], "commands": ["editor.action.moveLinesDownAction"] },
+        { "before": ["K"], "commands": ["editor.action.moveLinesUpAction"] },
+        // toggle comment selection
+        { "before": ["leader", "c"], "commands": ["editor.action.commentLine"] }
+    ],
+
+}
